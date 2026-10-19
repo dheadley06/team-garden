@@ -1,0 +1,22 @@
+[project]
+name = "team-garden"
+version = "0.1.0"
+description = "A Discord bot for end-of-day team check-ins, inspired by \"How to Lead a Team\" from Software Engineering at Google."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "discord.py>=2.4",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+team-garden = "team_garden.bot:main"
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[build-system]
+requires = ["uv_build>=0.8,<0.13"]
+build-backend = "uv_build"

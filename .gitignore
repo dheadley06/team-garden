@@ -1,0 +1,14 @@
+# Secrets and team data never go in the repo.
+.env
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+dist/
+
+# Local Claude Code settings
+.claude/settings.local.json
