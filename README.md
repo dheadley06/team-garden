@@ -1,4 +1,4 @@
-# 🪴 team-garden
+# 🪴 teamGarden
 
 A Discord bot for end-of-day check-ins on a software team. Each engineer
 tends a **flower** by answering four questions: how today's engineering work
