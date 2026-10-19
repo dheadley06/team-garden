@@ -87,8 +87,9 @@ person's latest check-in. Only you see your own flower.
 
 **Garden health (0–100)** = the average watered score (scaled to 0–100) × the
 fraction of members who checked in recently. Thriving ≥ 80, Healthy ≥ 60, Needs
-attention ≥ 40, Wilting < 40. Members are the people picked with
-`/garden members`, so people who don't check in pull the score down.
+attention ≥ 40, Wilting < 40. Members are the people picked during
+`/garden setup` (or changed later with `/garden members`), so people who don't
+check in pull the score down.
 
 ### The garden view
 
@@ -173,8 +174,11 @@ One bot can run many gardens: one per channel.
 uv run pytest
 ```
 
-- `src/team_garden/garden.py`: pure functions for flowers, health, and staleness
+- `src/team_garden/garden.py`: the check-in questions and answers, plus pure
+  functions for flowers, health, staleness, the "what to improve" tips, and
+  the ASCII garden art
 - `src/team_garden/store.py`: SQLite storage
 - `src/team_garden/render.py`: Discord embeds
-- `src/team_garden/views.py`: the `/checkin` form
+- `src/team_garden/views.py`: the `/checkin` form, the DM **Check in** button,
+  and the team member picker
 - `src/team_garden/bot.py`: slash commands and the daily loop
